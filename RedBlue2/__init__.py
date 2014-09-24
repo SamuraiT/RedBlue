@@ -1,1 +1,0 @@
-from .EventInfoExtractor import Event
