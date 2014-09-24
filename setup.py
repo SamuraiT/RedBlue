@@ -15,6 +15,11 @@ def read_file(filename):
     else:
         return ''
 
+requires = [
+    'BeautifulSoup4',
+    'mecab-pytho3',
+]
+
 setup(
     name = 'RedBlue',
     packages = ['RedBlue'],
@@ -26,6 +31,7 @@ setup(
     maintainer_email = 't.yasukawa01@gmail.com',
     url = 'https://github.com/SamuraiT/RedBlue',
     license='new BSD',
+    keywords = ["event", "event information"],
     long_description = read_file('README.md'),
     classifiers = [
         "Programming Language :: Python",
@@ -37,6 +43,7 @@ setup(
         "Topic :: Text Processing :: Linguistic",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    install_requires=requires,
 )
 
 

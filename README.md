@@ -1,8 +1,12 @@
 RedBlue: Event Info Extractor 
 ===============================
-RedBlue is created for extracting event infomation such as 
-`place`, `date`, `datetime`, `duriation time`, etc
-and also it justifies weather the given text data is event or not.
+RedBlue is Japanese event infomation extractor. This extracts information such
+as `place`, `date`, `datetime`, `duriation time`, etc
+and also it justifies weather the given html(text) data is event or not.
+
+Version
+-------
+You can use both `python 2.x` and `python3.x`.
 
 Why RedBlue
 ---------
@@ -15,9 +19,11 @@ Installtion
 pip install git+https://github.com/SamuraiT/RedBlue.git
 ```
 
-Usage Example
+Usage Example (python3)
 -------------
-See [`example.md`](./example.md) for more details.
+See more example: [`example2.md`](./example2.md) for python2
+
+See more example: [`example3.md`](./example3.md) for python3
 
     >>> from RedBlue import Event
     >>> f = open('RedBlue/flask.html') # open file you want to examine
