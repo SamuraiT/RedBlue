@@ -44,3 +44,8 @@ See more example: [`example3.md`](./example3.md) for python3
     '0700033'
 
 
+Credit
+-----
+
+This program was developed during my time of internship at 
+[Shiroyagi Corporation](http://shiroyagi.co.jp/)
