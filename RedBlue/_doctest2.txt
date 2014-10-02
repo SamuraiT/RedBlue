@@ -1,0 +1,29 @@
+The ``RedBlue`` module
+======================
+
+Using ``RedBlue2``
+-------------------
+
+This is the example of RedBlue
+
+Now use it:
+
+    >>> from Parser3 import Parser
+    >>> events = Parser.read(open('flask.html'))
+    >>> e = events[0]
+    >>> print e.place
+    旭川市
+    >>> e.date
+    datetime.datetime(2013, 11, 10, 0, 0)
+    >>> e.duri
+    [datetime.datetime(2013, 11, 10, 13, 0), datetime.datetime(2013, 11, 10, 17, 0)]
+    >>> e.time
+    u'13:00'
+    >>> e.postal_code
+    u'0700033'
+    >>> e.is_event()
+    True
+    >>> e.confidence()
+    87.5
+    
+

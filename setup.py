@@ -34,6 +34,7 @@ setup(
     keywords = ["event", "event information"],
     long_description = read_file('README.md'),
     classifiers = [
+        "Development Status :: 1 - Planning",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
