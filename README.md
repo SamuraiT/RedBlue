@@ -21,13 +21,13 @@ pip install git+https://github.com/SamuraiT/RedBlue.git
 
 Usage Example (python3)
 -------------
-See more example: [`example2.md`](./example2.md) for python2
+See more example: [`example2`](RedBlue/_doctest2.md) for python2
 
-See more example: [`example3.md`](./example3.md) for python3
+See more example: [`example3`](./example3.md) for python3
 
-    >>> from RedBlue import Event
-    >>> f = open('RedBlue/flask.html') # open file you want to examine
-    >>> e = Event(f)
+    >>> f = open('RedBlue/flask.html')
+    >>> events = Parser.read(f)
+    >>> e = events[0]
     >>> e.place
     '旭川市'
     >>> e.date
