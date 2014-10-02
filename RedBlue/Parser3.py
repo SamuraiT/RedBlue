@@ -236,24 +236,28 @@ class Parser(object):
 
     def str2datetime(self, dtstr):
         date = dtstr
+        if sys.version > '3':
+            encode = lambda txt: txt
+        else:
+            encode = lambda txt: txt.encode('utf-8')
         try:
-            date = datetime.strptime(dtstr, r"%m月%d日")
+            date = datetime.strptime(encode(dtstr), encode(r"%m月%d日"))
             date = datetime(datetime.now().year, date.month, date.day)
             return date
         except ValueError:
             pass
         try:
-            date = datetime.strptime(dtstr, r"%Y年%m月%d日")
+            date = datetime.strptime(encode(dtstr), encode(r"%Y年%m月%d日"))
             return date
         except ValueError:
             pass
         try:
-            date = datetime.strptime(dtstr, r"%Y/%m/%d")
+            date = datetime.strptime(encode(dtstr), r"%Y/%m/%d")
             return date
         except ValueError:
             pass
         try:
-            date = datetime.strptime(dtstr, r"%m/%d")
+            date = datetime.strptime(encode(dtstr), r"%m/%d")
             date =  datetime(datetime.now().year, date.month, date.day)
             return date
         except ValueError:
