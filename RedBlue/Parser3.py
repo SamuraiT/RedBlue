@@ -38,6 +38,8 @@ class Parser(object):
     give this class a text which you want to examine
     >>> f = open('flask.html')
     >>> events = Parser.read(f)
+    >>> print(events)
+    [<Event:0>]
     >>> e = events[0]
     >>> e.place
     '旭川市'

@@ -28,6 +28,8 @@ See more example: [`example3`](./example3.md) for python3
     >>> f = open('RedBlue/flask.html')
     >>> events = Parser.read(f)
     >>> e = events[0]
+    >>> print(events)
+    [<Event:0>]
     >>> e.place
     '旭川市'
     >>> e.date
