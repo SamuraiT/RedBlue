@@ -218,7 +218,6 @@ class Parser(object):
         else:
             return _(self.postal_codes[0].get('label', None))
 
-    @property
     def is_event(self, url=None):
         return self.confidence(url) >= 70
 
