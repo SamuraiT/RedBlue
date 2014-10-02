@@ -81,7 +81,6 @@ class Parser(object):
     def read(cls, fobj):
         parser = Parser()
         parser.read_text(fobj)
-        num = parser.num_of_events()
         return [Event(
                     place = parser.place,
                     time = parser.time,
@@ -92,7 +91,7 @@ class Parser(object):
                     confidence = parser.confidence,
                     soup = parser._soup,
                     num = 0
-                ) for i in range(num)
+                    )
                 ]
 
 
