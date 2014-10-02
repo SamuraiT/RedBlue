@@ -149,14 +149,15 @@ class Parser(object):
         status = 0
         place = 0
         t = [[]]
+        utext = text
         text = encode(text) #create variable for mecab memory problem
         mecab = MeCab.Tagger(encode("-Ochasen"))
         node = mecab.parseToNode(text)
         while node:
             f = node.feature
-            if '地域' in decode(f):
+            if u'地域' in decode(f):
                 status = 1
-                t[place].append(node.surface)
+                t[place].append(decode(node.surface))
             elif status:
                 status = 0
                 t[place] = ''.join(t[place])
@@ -171,8 +172,9 @@ class Parser(object):
         t = sorted(t, key=len, reverse=True)
         place = []
         for each in t:
-            place.extend(self.span_label(re.compile(each), text))
+            place.extend(self.span_label(re.compile(encode(each)), text))
         return place
+
 
 
     def one(self, prop):
