@@ -263,6 +263,3 @@ class Parser(object):
         except ValueError:
             pass
         return date
-
-events = Parser.read(open('flask.html'))
-e = events[0]
